@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>企業名</th>
+        <th>日程</th>
+        <th>内容</th>
+        <th>場所</th>
+        <th>予約締切日時</th>
+        <th>企業HPのURL</th>
+        <th>説明会説明</th>
+        <th>説明会PDF</th>
+    </tr>
+
+    <tr th:each="ANA : ${ketsu}">
+        <td>[[${ANA.kName}]]</td>
+        <td>[[${ANA.day}]]</td>
+        <td>[[${ANA.contents}]]</td>
+        <td>[[${ANA.place}]]</td>
+        <td>[[${ANA.deadline}]]</td>
+        <td>[[${ANA.URL}]]</td>
+        <td>[[${ANA.explanation}]]</td>
+        <td><button name="${ANA.id}">表示</button></td>
+
+    </tr>
+
+</table>
+
+</body>
+</html>

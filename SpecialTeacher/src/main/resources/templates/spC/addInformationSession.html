@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>説明会管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>説明会管理</h1>
+
+<form method="post" enctype="multipart/form-data" th:action="@{/ISok}">
+
+    <p>企業名<label><input type="text" name="kName"></label>
+    <p>日程<label><input type="text" name="day"></label>
+    <p>内容<label><input type="text" name="contents"></label>
+    <p>場所<label><input type="text" name="place"></label>
+    <p>予約締切日時<label><input type="text" name="deadline"></label>
+    <p>企業HPのURL<label><input type="text" name="URL"></label>
+    <p>説明会説明<label><input type="text" name="explanation"></label>
+    <p>説明会PDF<input type="file" name="tempfile" accept="application/pdf">
+    <br>
+    <button>送信</button>
+
+</form>
+
+</body>
+</html>
